@@ -9,7 +9,7 @@ node('master'){
     //bat 'mvn -Dmaven.test.failure.ignore clean package'
     bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
   }
-  state('results'){
+  stage('results'){
     junit '**/target/surefire-reports/TEST-*.xml'
     archiveArtifacts 'target/*.jar'
   }
