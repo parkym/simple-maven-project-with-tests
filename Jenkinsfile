@@ -2,7 +2,7 @@ node('master'){
   checkout scm
   def mvnHome
  stage('preparation'){
-    git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+    git 'https://github.com/parkym/simple-maven-project-with-tests.git'
     mvnHome = tool 'M3'
  }
   stage('Build'){
